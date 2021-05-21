@@ -3,6 +3,11 @@ package sms.data;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Class try to build a Meal combining all the differents recipes that the program can create
+ *
+ */
+
 public class Meal {
     protected int numID;
     protected String name;

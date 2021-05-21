@@ -3,6 +3,10 @@ package sms.data;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class is made to conform the way you can make orders as a list of meals or products
+ */
+
 public class Order {
     protected List<Meal> order = new ArrayList<Meal>();
     protected int orderNumber;

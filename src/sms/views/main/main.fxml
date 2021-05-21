@@ -107,8 +107,8 @@
                </children>
             </VBox>
             <Button fx:id="createRecipe" layoutX="69.0" layoutY="107.0" mnemonicParsing="false" onAction="#createRecipe" text="Create recipe" />
-            <Button fx:id="addIngredientRecipe" layoutX="66.0" layoutY="288.0" mnemonicParsing="false" text="Add ingredient" />
-            <Button fx:id="finishRecipe" layoutX="72.0" layoutY="336.0" mnemonicParsing="false" text="Close recipe" />
+            <Button fx:id="addIngredientRecipe" layoutX="66.0" layoutY="288.0" mnemonicParsing="false" onAction="#addIngredient" text="Add ingredient" />
+            <Button fx:id="finishRecipe" layoutX="72.0" layoutY="336.0" mnemonicParsing="false" onAction="#closeRecipe" text="Close recipe" />
             <TableView fx:id="recipesTable" layoutX="939.0" layoutY="4.0" prefHeight="388.0" prefWidth="259.0">
               <columns>
                 <TableColumn prefWidth="67.0" text="Id" />
