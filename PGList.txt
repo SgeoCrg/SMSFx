@@ -1,0 +1,2 @@
+Frozen;1;16.0;60;Regular Bread
+Cool;2;30.0;300;Regular Meat

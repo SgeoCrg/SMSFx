@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sms.views.main.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="primerGoodTable" layoutX="534.0" prefHeight="396.0" prefWidth="501.0">
+              <columns>
+                <TableColumn fx:id="typeCol" prefWidth="60.0" text="TYPE" />
+                  <TableColumn fx:id="idCol" prefWidth="50.0" text="Id" />
+                <TableColumn fx:id="nameCol" prefWidth="153.0" text="name" />
+                  <TableColumn fx:id="priceCol" prefWidth="74.0" text="price" />
+                  <TableColumn fx:id="amountCol" prefWidth="71.0" text="amount" />
+                  <TableColumn fx:id="priceunitCol" prefWidth="100.0" text="price per unit" />
+              </columns>
+            </TableView>
+            <VBox layoutX="167.0" layoutY="14.0" spacing="15.0">
+               <children>
+                  <HBox spacing="15.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="Type" />
+                              <ComboBox fx:id="typeset" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Id" />
+                        <TextField fx:id="idset" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="nameset" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Price" />
+                        <TextField fx:id="priceset" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Amount per pack" />
+                        <TextField fx:id="amountset" prefHeight="26.0" prefWidth="57.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="addButton" layoutX="241.0" layoutY="267.0" mnemonicParsing="false" onAction="#createPrimeGood" text="ADD" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="ingredientsTable" layoutX="216.0" prefHeight="396.0" prefWidth="501.0">
+               <columns>
+                  <TableColumn fx:id="idCol1" prefWidth="50.0" text="#" />
+                  <TableColumn fx:id="nameCol1" prefWidth="267.0" text="ingredient id" />
+                  <TableColumn fx:id="priceunitCol1" prefWidth="183.0" text="amount" />
+               </columns>
+            </TableView>
+            <VBox layoutX="21.0" layoutY="14.0" spacing="15.0">
+               <children>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Id" />
+                        <TextField fx:id="recipeIDTXT" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="15.0">
+                     <children>
+                        <Label text="Name" />
+                        <TextField fx:id="recipeNameTXT" prefHeight="25.0" prefWidth="137.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="30.0" layoutY="186.0" spacing="15.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="178.0" spacing="15.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="94.0" text="Ingredient Id" />
+                        <ComboBox fx:id="setIngredient" prefHeight="25.0" prefWidth="115.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="25.0" prefWidth="150.0">
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="109.0" text="Amount" />
+                        <TextField fx:id="amountTXT" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="createRecipe" layoutX="69.0" layoutY="107.0" mnemonicParsing="false" onAction="#createRecipe" text="Create recipe" />
+            <Button fx:id="addIngredientRecipe" layoutX="66.0" layoutY="288.0" mnemonicParsing="false" text="Add ingredient" />
+            <Button fx:id="finishRecipe" layoutX="72.0" layoutY="336.0" mnemonicParsing="false" text="Close recipe" />
+            <TableView fx:id="recipesTable" layoutX="939.0" layoutY="4.0" prefHeight="388.0" prefWidth="259.0">
+              <columns>
+                <TableColumn prefWidth="67.0" text="Id" />
+                <TableColumn prefWidth="191.0" text="name" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
